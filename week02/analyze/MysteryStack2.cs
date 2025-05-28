@@ -12,7 +12,7 @@
 
                 var op2 = stack.Pop();
                 var op1 = stack.Pop();
-                float res;
+                float res;             
                 if (item == "+") {
                     res = op1 + op2;
                 }
