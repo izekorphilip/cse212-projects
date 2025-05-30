@@ -9,7 +9,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Add one item, then remove it.
     // Expected Result: Dequeue returns that item.
-    // Defect(s) Found: None
+    // Defect(s) Found: - None. Highest priority item is correctly returned.
     public void TestPriorityQueue_1()
     {
         var priorityQueue = new PriorityQueue();
@@ -21,7 +21,8 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Add multiple items with different priorities.
     // Expected Result: Dequeue returns item with highest priority.
-    // Defect(s) Found: None
+    // Defect(s) Found: - FIFO rule is violated when multiple items have the same priority.
+    //                  - Code uses >= instead of >, which picks the last item instead of the first.
     public void TestPriorityQueue_2()
     {
         var priorityQueue = new PriorityQueue();
@@ -36,7 +37,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Add multiple items with same priority.
     // Expected Result: Dequeue returns first inserted of the highest priority.
-    // Defect(s) Found: None
+    // Defect(s) Found: Code wasn't present at defent test. This past of the code is clean
     public void TestPriorityQueue_FIFOWithEqualPriority()
     {
         var priorityQueue = new PriorityQueue();
@@ -49,7 +50,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Dequeue from an empty queue.
     // Expected Result: InvalidOperationException thrown.
-    // Defect(s) Found: None
+    // Defect(s) Found: Code wasn't present at defent test. This past of the code is clean
     [ExpectedException(typeof(InvalidOperationException))]
     public void TestPriorityQueue_EmptyDequeue()
     {
@@ -60,7 +61,7 @@ public class PriorityQueueTests
     [TestMethod]
     // Scenario: Add mixed priorities and multiple items.
     // Expected Result: Dequeues in priority order, FIFO within priority.
-    // Defect(s) Found: None
+    // Defect(s) Found: Code wasn't present at defent test. This past of the code is clean
     public void TestPriorityQueue_MixedOrderCorrectness()
     {
         var priorityQueue = new PriorityQueue();
