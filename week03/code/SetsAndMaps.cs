@@ -147,21 +147,7 @@ public static class SetsAndMaps
         // 2. Add code below to create a string out each place a earthquake has happened today and its magitude.
         // 3. Return an array of these string descriptions.
         
-        /*var result = new List<string>();
-
-        if (featureCollection?.Features != null)
-        {
-            foreach (var feature in featureCollection.Features)
-            {
-                if (feature.Properties?.Place != null)
-                    result.Add($"{feature.Properties.Place} ({feature.Properties.Mag})");
-            }
-        }
-
-        return result.ToArray();
-    }*/
-
-     if (featureCollection?.Features == null)
+        if (featureCollection?.Features == null)
             return Array.Empty<string>();
 
         var result = featureCollection.Features
